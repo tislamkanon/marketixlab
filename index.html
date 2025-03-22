@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marketix Lab</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="icon" type="image/png" href="images\marketix-logo-icon.png.png">
+</head>
+<body>
+  <div class="site-wrapper">
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="loader">
+        <svg viewBox="0 0 80 80">
+          <circle id="loader-circle" cx="40" cy="40" r="32"></circle>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Cursor -->
+    <div class="cursor-dot-outline"></div>
+    <div class="cursor-dot"></div>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <a href="#" class="logo">
+            <img src="images/marketix-logo-black.png" alt="Marketix Lab" class="logo-light" width="180" height="50">
+            <img src="images/marketix-logo-white.png" alt="Marketix Lab" class="logo-dark" width="180" height="50">
+          </a>
+          
+          <nav class="desktop-nav">
+            <button class="nav-link active" data-section="home">
+              <span>Home</span>
+              <span class="nav-indicator"></span>
+            </button>
+            <button class="nav-link" data-section="services">
+                          <span>Services</span>
+              <span class="nav-indicator"></span>
+            </button>
+            <button class="nav-link" data-section="about">
+              <span>About</span>
+              <span class="nav-indicator"></span>
+            </button>
+            <button class="nav-link" data-section="work">
+              <span>Our Work</span>
+              <span class="nav-indicator"></span>
+            </button>
+            <button class="nav-link" data-section="testimonials">
+              <span>Testimonials</span>
+              <span class="nav-indicator"></span>
+            </button>
+            <button class="nav-link" data-section="contact">
+              <span>Contact</span>
+              <span class="nav-indicator"></span>
+            </button>
+          </nav>
+          <div class="header-actions">
+            <button class="theme-toggle" aria-label="Toggle theme">
+              <div class="theme-toggle-track">
+                <div class="theme-toggle-thumb">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+                </div>
+              </div>
+            </button>
+            <a href="#contact" class="btn btn-primary desktop-only">
+              <span>Get Started</span>
+              <span class="btn-shine"></span>
+            </a>
+            <button class="menu-toggle mobile-only" aria-label="Toggle menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <div class="mobile-menu-header">
+        <a href="#" class="logo">
+          <img src="images/marketix-logo.png" alt="Marketix Lab" width="150" height="40">
+        </a>
+        <button class="close-menu" aria-label="Close menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav class="mobile-nav">
+        <button class="nav-link active" data-section="home">Home</button>
+        <button class="nav-link" data-section="services">Services</button>
+        <button class="nav-link" data-section="about">About</button>
+        <button class="nav-link" data-section="work">Our Work</button>
+        <button class="nav-link" data-section="testimonials">Testimonials</button>
+        <button class="nav-link" data-section="contact">Contact</button>
+      </nav>
+      <div class="mobile-menu-footer">
+        <button class="theme-toggle" aria-label="Toggle theme">
+          <div class="theme-toggle-track">
+            <div class="theme-toggle-thumb">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+            </div>
+          </div>
+        </button>
+        <a href="#contact" class="btn btn-primary">
+          <span>Get Started</span>
+          <span class="btn-shine"></span>
+        </a>
+      </div>
+    </div>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="hero-section">
+        <div class="bg-shapes">
+          <div class="shape shape-1"></div>
+          <div class="shape shape-2"></div>
+          <div class="shape shape-3"></div>
+          <div class="particles">
+            <div class="particle particle-1"></div>
+            <div class="particle particle-2"></div>
+            <div class="particle particle-3"></div>
+            <div class="particle particle-4"></div>
+            <div class="particle particle-5"></div>
+            <div class="particle particle-6"></div>
+            <div class="particle particle-7"></div>
+            <div class="particle particle-8"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
+              <span class="badge">Digital Marketing Agency</span>
+              <h1 class="reveal-text">Elevate Your <span class="highlight">Digital Presence</span></h1>
+              <p class="reveal-text">Marketix Lab helps businesses grow through strategic digital marketing solutions tailored to your unique needs.</p>
+              <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary btn-animated">
+                  <span>Get Started</span>
+                  <i class="fas fa-arrow-right"></i>
+                  <span class="btn-shine"></span>
+                </a>
+                <a href="#services" class="btn btn-outline btn-animated">
+                  <span>Our Services</span>
+                  <span class="btn-shine"></span>
+                </a>
+              </div>
+            </div>
+            <div class="hero-image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+              <div class="image-wrapper">
+                <div class="image-glow"></div>
+                <img src="images/who-we-are.jpg" alt="Who We Are">
+                <div class="stats-card">
+                  <div class="stats-icon">
+                    <i class="fas fa-check-circle"></i>
+                  </div>
+                  <div class="stats-text">
+                    <p>Trusted by</p>
+                    <p class="stats-number counter" data-target="60">0</p><p class="stats-number">+ Clients</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="brands-section" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+            <p>TRUSTED BY LEADING BRANDS</p>
+            <div class="brands-logos">
+              <img src="https://placehold.co/120x40?text=Brand1" alt="Brand 1">
+              <img src="https://placehold.co/120x40?text=Brand2" alt="Brand 2">
+              <img src="https://placehold.co/120x40?text=Brand3" alt="Brand 3">
+              <img src="https://placehold.co/120x40?text=Brand4" alt="Brand 4">
+              <img src="https://placehold.co/120x40?text=Brand5" alt="Brand 5">
+            </div>
+          </div>
+        </div>
+        <div class="scroll-indicator">
+          <div class="mouse">
+            <div class="wheel"></div>
+          </div>
+          <div class="arrow-scroll">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="services-section">
+        <div class="bg-elements">
+          <div class="bg-element-1"></div>
+          <div class="bg-element-2"></div>
+          <div class="floating-shapes">
+            <div class="floating-shape floating-shape-1"></div>
+            <div class="floating-shape floating-shape-2"></div>
+            <div class="floating-shape floating-shape-3"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="section-header" data-aos="fade-up" data-aos-duration="1000">
+            <span class="badge">Services</span>
+            <p class="#"></p>
+            <h2 class="reveal-text">Our Digital Marketing Services</h2>
+            <p class="reveal-text">We offer comprehensive digital marketing solutions to help your business thrive in the digital landscape.</p>
+          </div>
+          
+          <div class="services-grid">
+            <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+              <div class="card-decoration"></div>
+              <div class="service-icon primary">
+                <i class="fas fa-pen-nib"></i>
+              </div>
+              <h3>Content Marketing</h3>
+              <p>Engaging content that resonates with your audience and drives conversions.</p>
+              <div class="card-footer">
+                <a href="#" class="learn-more">
+                  <span>Learn more</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            
+            <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+              <div class="card-decoration"></div>
+              <div class="service-icon accent">
+                <i class="fas fa-smile"></i>
+              </div>
+              <h3>Social Media Marketing</h3>
+              <p>Strategic social media campaigns that build brand awareness and engagement.</p>
+              <div class="card-footer">
+                <a href="#" class="learn-more">
+                  <span>Learn more</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            
+            <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+              <div class="card-decoration"></div>
+              <div class="service-icon success">
+                <i class="fas fa-home"></i>
+              </div>
+              <h3>SEO Optimization</h3>
+              <p>Improve your search engine rankings and drive organic traffic to your website.</p>
+              <div class="card-footer">
+                <a href="#" class="learn-more">
+                  <span>Learn more</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            
+            <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+              <div class="card-decoration"></div>
+              <div class="service-icon primary">
+                <i class="fas fa-building"></i>
+              </div>
+              <h3>Brand Development</h3>
+              <p>Targeted pay-per-click campaigns that maximize ROI and drive qualified leads.</p>
+              <div class="card-footer">
+                <a href="#" class="learn-more">
+                  <span>Learn more</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            
+            <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+              <div class="card-decoration"></div>
+              <div class="service-icon accent">
+                <i class="fas fa-code"></i>
+              </div>
+              <h3>Web Development</h3>
+              <p>Personalized email campaigns that nurture leads and boost customer retention.</p>
+              <div class="card-footer">
+                <a href="#" class="learn-more">
+                  <span>Learn more</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            
+            <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+              <div class="card-decoration"></div>
+              <div class="service-icon success">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h3>Analytics & Reporting</h3>
+              <p>Comprehensive data analysis to measure performance and optimize your marketing strategy.</p>
+              <div class="card-footer">
+                <a href="#" class="learn-more">
+                  <span>Learn more</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about-section">
+        <div class="bg-pattern"></div>
+        <div class="container">
+          <div class="about-content">
+            <div class="about-text" data-aos="fade-right" data-aos-duration="1000">
+              <span class="badge">About Us</span>
+              <p class="#"></p>
+              <h2 class="reveal-text">Who We Are</h2>
+              <p class="reveal-text">Marketix Lab is a full-service digital marketing agency dedicated to helping businesses grow their online presence and achieve their marketing goals.</p>
+              
+              <div class="features-list">
+                <div class="feature-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                  <div class="feature-icon">
+                    <i class="fas fa-check-circle"></i>
+                  </div>
+                  <p>Results-driven strategies tailored to your business</p>
+                </div>
+                <div class="feature-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                  <div class="feature-icon">
+                    <i class="fas fa-check-circle"></i>
+                  </div>
+                  <p>Experienced team of marketing professionals</p>
+                </div>
+                <div class="feature-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                  <div class="feature-icon">
+                    <i class="fas fa-check-circle"></i>
+                  </div>
+                  <p>Data-backed decisions for maximum ROI</p>
+                </div>
+                <div class="feature-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                  <div class="feature-icon">
+                    <i class="fas fa-check-circle"></i>
+                  </div>
+                  <p>Transparent communication and reporting</p>
+                </div>
+              </div>
+              
+              <a href="#contact" class="btn btn-primary btn-animated" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+                <span>Contact Us</span>
+                <span class="btn-shine"></span>
+              </a>
+            </div>
+            
+            <div class="about-image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+              <div class="image-wrapper">
+                <div class="image-glow"></div>
+                <img src="images/poster-2.jpg" alt="Who We Are">
+                <div class="stats-overlay">
+                  <div class="stats-grid">
+                    <div class="stat-item">
+                      <p class="stat-number counter" data-target="500">0</p><p class="stat-number">+</p>
+                      <p class="stat-label">Happy Clients</p>
+                    </div>
+                    <div class="stat-item">
+                      <p class="stat-number counter" data-target="10">0</p><p class="stat-number">+</p>
+                      <p class="stat-label">Years Experience</p>
+                    </div>
+                    <div class="stat-item">
+                      <p class="stat-number counter" data-target="98">0</p><p class="stat-number">%</p>
+                      <p class="stat-label">Client Retention</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Work Section -->
+      <section id="work" class="work-section">
+        <div class="bg-elements">
+          <div class="bg-element-1"></div>
+          <div class="bg-element-2"></div>
+          <div class="floating-shapes">
+            <div class="floating-shape floating-shape-1"></div>
+            <div class="floating-shape floating-shape-2"></div>
+            <div class="floating-shape floating-shape-3"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="section-header" data-aos="fade-up" data-aos-duration="1000">
+            <span class="badge">Portfolio</span>
+            <p class="#"></p>
+            <h2 class="reveal-text">Our Work</h2>
+            <p class="#"></p>
+            <p= class="reveal-text">Take a look at some of our successful projects and campaigns.</p>
+          </div>
+          
+          <div class="portfolio-grid">
+            <div class="portfolio-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+              <div class="portfolio-overlay"></div>
+              <img src="images/kanon-ceo.jpg" alt="E-commerce Growth">
+              <div class="portfolio-content">
+                <div class="portfolio-stats">+150% Revenue</div>
+                <h3>E-commerce Growth</h3>
+                <p>SEO & PPC Campaign</p>
+                <button class="btn btn-sm btn-outline-light">View Case Study</button>
+              </div>
+            </div>
+            
+            <div class="portfolio-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+              <div class="portfolio-overlay"></div>
+              <img src="images/rizvan-coo.jpg" alt="Brand Awareness">
+              <div class="portfolio-content">
+                <div class="portfolio-stats">+200% Engagement</div>
+                <h3>Brand Awareness</h3>
+                <p>Social Media Campaign</p>
+                <button class="btn btn-sm btn-outline-light">View Case Study</button>
+              </div>
+            </div>
+            
+            <div class="portfolio-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+              <div class="portfolio-overlay"></div>
+              <img src="images/evan-cfo.jpg" alt="Lead Generation">
+              <div class="portfolio-content">
+                <div class="portfolio-stats">+300% Leads</div>
+                <h3>Lead Generation</h3>
+                <p>Email Marketing</p>
+                <button class="btn btn-sm btn-outline-light">View Case Study</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="testimonials-section">
+        <div class="bg-pattern"></div>
+        <div class="container">
+          <div class="section-header" data-aos="fade-up" data-aos-duration="1000">
+            <span class="badge">Testimonials</span>
+            <p class="#"></p>
+            <h2 class="reveal-text">What Our Clients Say</h2>
+            <p class="reveal-text">Don't just take our word for it. Here's what our clients have to say about working with Marketix Lab.</p>
+          </div>
+          
+          <div class="testimonials-slider" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <div class="testimonial-track">
+              <div class="testimonial-slide active" data-index="0">
+                <div class="quote-marks">
+                  <div class="quote-mark-top">"</div>
+                  <div class="quote-mark-bottom">"</div>
+                </div>
+                <div class="testimonial-stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">Marketix Lab transformed our online presence. Their strategic approach to digital marketing helped us increase our leads by 150% in just three months.</p>
+                <div class="testimonial-author">
+                  <div class="author-avatar">
+                    <span>JD</span>
+                  </div>
+                  <div class="author-info">
+                    <p class="author-name">John Doe</p>
+                    <p class="author-position">CEO, Tech Solutions</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="testimonial-slide" data-index="1">
+                <div class="quote-marks">
+                  <div class="quote-mark-top">"</div>
+                  <div class="quote-mark-bottom">"</div>
+                </div>
+                <div class="testimonial-stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">The team at Marketix Lab is exceptional. Their content marketing strategy helped us establish ourselves as thought leaders in our industry.</p>
+                <div class="testimonial-author">
+                  <div class="author-avatar">
+                    <span>JS</span>
+                  </div>
+                  <div class="author-info">
+                    <p class="author-name">Jane Smith</p>
+                    <p class="author-position">Marketing Director, Retail Brand</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="testimonial-slide" data-index="2">
+                <div class="quote-marks">
+                  <div class="quote-mark-top">"</div>
+                  <div class="quote-mark-bottom">"</div>
+                </div>
+                <div class="testimonial-stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">Working with Marketix Lab has been a game-changer for our business. Their data-driven approach to PPC advertising delivered an ROI of 300%.</p>
+                <div class="testimonial-author">
+                  <div class="author-avatar">
+                    <span>RJ</span>
+                  </div>
+                  <div class="author-info">
+                    <p class="author-name">Robert Johnson</p>
+                    <p class="author-position">Founder, E-commerce Store</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="testimonial-slide" data-index="3">
+                <div class="quote-marks">
+                  <div class="quote-mark-top">"</div>
+                  <div class="quote-mark-bottom">"</div>
+                </div>
+                <div class="testimonial-stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">Marketix Lab's SEO expertise helped us climb to the first page of Google for our key search terms. Our organic traffic has increased by 200%.</p>
+                <div class="testimonial-author">
+                  <div class="author-avatar">
+                    <span>SW</span>
+                  </div>
+                  <div class="author-info">
+                    <p class="author-name">Sarah Williams</p>
+                    <p class="author-position">Marketing Manager, SaaS Company</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="testimonial-controls">
+              <button class="testimonial-arrow prev-testimonial" aria-label="Previous testimonial">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <div class="testimonial-dots">
+                <button class="dot active" data-index="0"></button>
+                <button class="dot" data-index="1"></button>
+                <button class="dot" data-index="2"></button>
+                <button class="dot" data-index="3"></button>
+              </div>
+              <button class="testimonial-arrow next-testimonial" aria-label="Next testimonial">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact-section">
+        <div class="bg-elements">
+          <div class="bg-element-1"></div>
+          <div class="bg-element-2"></div>
+          <div class="floating-shapes">
+            <div class="floating-shape floating-shape-1"></div>
+            <div class="floating-shape floating-shape-2"></div>
+            <div class="floating-shape floating-shape-3"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="contact-content">
+            <div class="contact-info" data-aos="fade-right" data-aos-duration="1000">
+              <span class="badge">Contact Us</span>
+              <p class="#"></p>
+                <h2 class="reveal-text">Get In Touch</h2>
+              <p class="reveal-text">Ready to elevate your digital marketing strategy? Contact us today to schedule a consultation.</p>
+              
+              <div class="contact-details">
+                <div class="contact-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                  <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="contact-text">
+                    <h3>Address</h3>
+                    <p> Jl. Sukapura No.20, Sukapura, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40267</p>
+                  </div>
+                </div>
+                
+                <div class="contact-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                  <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="contact-text">
+                    <h3>Email</h3>
+                    <p>info@marketixlab.com</p>
+                  </div>
+                </div>
+                
+                <div class="contact-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                  <div class="contact-icon">
+                    <i class="fab fa-whatsapp"></i>
+                  </div>
+                  <div class="contact-text">
+                    <h3>WhatsApp</h3>
+                    <p>(+62) 813-1619-8226</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="contact-form-container" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+              <div class="form-decoration"></div>
+              <form id="contactForm" class="contact-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="firstName">First name</label>
+                    <div class="input-wrapper">
+                      <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+                      <span class="input-focus-effect"></span>
+                    </div>
+                    <span class="error-message" id="firstNameError"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="lastName">Last name</label>
+                    <div class="input-wrapper">
+                      <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+                      <span class="input-focus-effect"></span>
+                    </div>
+                    <span class="error-message" id="lastNameError"></span>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <div class="input-wrapper">
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <span class="input-focus-effect"></span>
+                  </div>
+                  <span class="error-message" id="emailError"></span>
+                </div>
+                
+                <div class="form-group">
+                  <label for="company">Company</label>
+                  <div class="input-wrapper">
+                    <input type="text" id="company" name="company" placeholder="Enter your company name">
+                    <span class="input-focus-effect"></span>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <div class="input-wrapper">
+                    <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+                    <span class="input-focus-effect"></span>
+                  </div>
+                  <span class="error-message" id="messageError"></span>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-block btn-animated" id="submitButton">
+                  <span class="btn-text">Send Message</span>
+                  <span class="btn-loading">
+                    <i class="fas fa-spinner fa-spin"></i> Sending...
+                  </span>
+                  <span class="btn-shine"></span>
+                </button>
+              </form>
+              
+              <div class="form-success-message" id="formSuccess">
+                <div class="success-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <h3>Message Sent!</h3>
+                <p>Thank you for contacting us. We'll get back to you shortly.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo" data-aos="fade-right" data-aos-duration="800">
+            <a href="#" class="logo">
+              <img src="images/marketix-logo-black.png" alt="Marketix Lab" class="logo-light" width="180" height="40">
+              <img src="images/marketix-logo-white.png" alt="Marketix Lab" class="logo-dark" width="180" height="40">
+            </a>
+          </div>
+          <p class="copyright" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">© <span id="currentYear"></span> Marketix Lab. All rights reserved.</p>
+          <div class="social-links" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+            <a href="https://www.instagram.com/marketix.lab" class="social-link" aria-label="Facebook" target="_blank">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/marketix.lab" class="social-link" aria-label="Instagram" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/marketix.lab" class="social-link" aria-label="TikTok" target="_blank">
+              <i class="fab fa-tiktok"></i>
+          </a>
+          
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
