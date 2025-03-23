@@ -342,3 +342,27 @@ document.addEventListener("DOMContentLoaded", () => {
   updateActiveSection()
 })
 
+function sendEmail() {
+  const firstName = document.getElementById("firstName").value;
+  const lastName = document.getElementById("lastName").value;
+  const email = document.getElementById("email").value;
+  const company = document.getElementById("company").value;
+  const message = document.getElementById("message").value;
+
+  const templateParams = {
+    name: `${firstName} ${lastName}`,
+    email: email,
+    company: company,
+    message: message
+  };
+
+  emailjs.send("service_8y4xrei", "template_lcmfixx", templateParams, "0AV5JViJGlh1s0AJT")
+  .then(response => {
+    console.log("Email sent!", response);
+    alert("Email sent successfully!");
+  })
+  .catch(error => {
+    console.error("Error:", error);
+    alert("Failed to send email.");
+  });
+}
