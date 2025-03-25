@@ -1515,11 +1515,17 @@ section {
   opacity: 0;
   transform: scale(0.9);
   transition: all var(--transition-medium) var(--easing);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  visibility: hidden;
 }
 
 .testimonial-slide.active {
   opacity: 1;
   transform: scale(1);
+  position: relative;
+  visibility: visible;
 }
 
 .quote-marks {
