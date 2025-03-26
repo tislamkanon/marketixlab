@@ -1,0 +1,15 @@
+# robots.txt for Marketix Lab
+
+User-agent: *
+Allow: /
+Disallow: /cdn-cgi/  # Block Cloudflare scripts (used for email protection)
+Disallow: /*.json$    # Block JSON files, if any
+Disallow: /thank-you  # Block thank-you page (if it exists)
+
+User-agent: Googlebot
+Allow: /
+Disallow: /cdn-cgi/
+Disallow: /*.json$
+Disallow: /thank-you
+
+Sitemap: https://marketixlab.com/sitemap.xml
