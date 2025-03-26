@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Main Page -->
+  <url>
+    <loc>https://marketixlab.com/</loc>
+    <lastmod>2025-03-26T00:00:00+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marketixlab.com/" />
+    <image:image>
+      <image:loc>https://marketixlab.com/images/marketix-logo-black.png</image:loc>
+      <image:title>Marketix Lab Logo</image:title>
+      <image:caption>Official logo of Marketix Lab</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://marketixlab.com/images/who-we-are.jpg</image:loc>
+      <image:title>Who We Are</image:title>
+      <image:caption>Marketix Lab team overview</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Services Section -->
+  <url>
+    <loc>https://marketixlab.com/#services</loc>
+    <lastmod>2025-03-26T00:00:00+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marketixlab.com/#services" />
+    <image:image>
+      <image:loc>https://marketixlab.com/images/marketix-logo-icon.png</image:loc>
+      <image:title>Services Icon</image:title>
+      <image:caption>Icon representing Marketix Lab services</image:caption>
+    </image:image>
+  </url>
+
+  <!-- About Section -->
+  <url>
+    <loc>https://marketixlab.com/#about</loc>
+    <lastmod>2025-03-26T00:00:00+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marketixlab.com/#about" />
+    <image:image>
+      <image:loc>https://marketixlab.com/images/poster-2.jpg</image:loc>
+      <image:title>About Us Image</image:title>
+      <image:caption>Visual representation of Marketix Lab's mission</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Work Section -->
+  <url>
+    <loc>https://marketixlab.com/#work</loc>
+    <lastmod>2025-03-26T00:00:00+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marketixlab.com/#work" />
+    <image:image>
+      <image:loc>https://marketixlab.com/images/bpw-1.jpg</image:loc>
+      <image:title>E-commerce Growth Project</image:title>
+      <image:caption>Portfolio image for E-commerce Growth campaign</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://marketixlab.com/images/bpw-2.jpg</image:loc>
+      <image:title>Brand Awareness Project</image:title>
+      <image:caption>Portfolio image for Brand Awareness campaign</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://marketixlab.com/images/bpw-4.jpg</image:loc>
+      <image:title>Lead Generation Project</image:title>
+      <image:caption>Portfolio image for Lead Generation campaign</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Testimonials Section -->
+  <url>
+    <loc>https://marketixlab.com/#testimonials</loc>
+    <lastmod>2025-03-26T00:00:00+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marketixlab.com/#testimonials" />
+  </url>
+
+  <!-- Contact Section -->
+  <url>
+    <loc>https://marketixlab.com/#contact</loc>
+    <lastmod>2025-03-26T00:00:00+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marketixlab.com/#contact" />
+  </url>
+</urlset>
