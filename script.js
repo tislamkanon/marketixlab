@@ -342,3 +342,74 @@ document.addEventListener("DOMContentLoaded", () => {
   updateActiveSection()
 })
 
+// Add a simple rate limiter (one submission per 30 seconds)
+let lastSubmissionTime = 0;
+const SUBMISSION_DELAY = 30000; // 30 seconds in milliseconds
+
+function sendEmail() {
+  // Check rate limit first
+  const currentTime = Date.now();
+  if (currentTime - lastSubmissionTime < SUBMISSION_DELAY) {
+    alert("Please wait 30 seconds before sending another message.");
+    return;
+  }
+
+  // Get form values
+  const firstName = document.getElementById("firstName").value.trim();
+  const lastName = document.getElementById("lastName").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const company = document.getElementById("company").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  // Validate all fields are filled
+  if (!firstName || !lastName || !email || !company || !message) {
+    alert("Please fill in all required fields.");
+    return;
+  }
+
+  // Email format validation
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(email)) {
+    alert("Please enter a valid email address.");
+    return;
+  }
+
+  // Additional spam prevention: check for suspicious content
+  const suspiciousPatterns = [
+    /http[s]?:\/\//i,        // Links
+    /<[^>]+>/i,             // HTML tags
+    /(viagra|cialis|porn)/i // Common spam keywords
+  ];
+  
+  const allContent = `${firstName} ${lastName} ${company} ${message}`;
+  if (suspiciousPatterns.some(pattern => pattern.test(allContent))) {
+    alert("Your message contains suspicious content and cannot be sent.");
+    return;
+  }
+
+  // Prepare email parameters
+  const templateParams = {
+    name: `${firstName} ${lastName}`,
+    email: email,
+    company: company,
+    message: message
+  };
+
+  // Send email
+  emailjs.send("service_8y4xrei", "template_lcmfixx", templateParams, "0AV5JViJGlh1s0AJT")
+    .then(response => {
+      console.log("Email sent!", response);
+      lastSubmissionTime = Date.now(); // Update last submission time
+      alert("Email sent successfully!");
+      // Clear form
+      document.getElementById("firstName").value = "";
+      document.getElementById("lastName").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("company").value = "";
+      document.getElementById("message").value = "";
+    })
+    .catch(error => {
+      console.error("Error:", error);
+      alert("Failed to send email. Please try again later.");
+    });
+}
