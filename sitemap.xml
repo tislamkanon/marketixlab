@@ -20,7 +20,6 @@
       <image:caption>Marketix Lab team overview</image:caption>
     </image:image>
   </url>
-
   <!-- Services Section -->
   <url>
     <loc>https://marketixlab.com/#services</loc>
@@ -34,7 +33,6 @@
       <image:caption>Icon representing Marketix Lab services</image:caption>
     </image:image>
   </url>
-
   <!-- About Section -->
   <url>
     <loc>https://marketixlab.com/#about</loc>
@@ -48,7 +46,6 @@
       <image:caption>Visual representation of Marketix Lab's mission</image:caption>
     </image:image>
   </url>
-
   <!-- Work Section -->
   <url>
     <loc>https://marketixlab.com/#work</loc>
@@ -72,7 +69,6 @@
       <image:caption>Portfolio image for Lead Generation campaign</image:caption>
     </image:image>
   </url>
-
   <!-- Testimonials Section -->
   <url>
     <loc>https://marketixlab.com/#testimonials</loc>
@@ -81,7 +77,6 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://marketixlab.com/#testimonials" />
   </url>
-
   <!-- Contact Section -->
   <url>
     <loc>https://marketixlab.com/#contact</loc>
