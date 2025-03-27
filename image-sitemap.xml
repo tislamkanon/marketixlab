@@ -1,30 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Home Page Images -->
   <url>
     <loc>https://www.marketixlab.com/</loc>
     <image:image>
       <image:loc>https://www.marketixlab.com/images/marketix-logo-black.png</image:loc>
       <image:title>Marketix Lab Logo</image:title>
       <image:caption>Digital Marketing Agency Logo</image:caption>
+      <image:geo_location>Bandung, Indonesia</image:geo_location>
+      <image:license>https://www.marketixlab.com/license</image:license>
     </image:image>
     <image:image>
       <image:loc>https://www.marketixlab.com/images/marketix-logo-white.png</image:loc>
       <image:title>Marketix Lab Logo White Version</image:title>
       <image:caption>Digital Marketing Agency Logo for Dark Mode</image:caption>
+      <image:geo_location>Bandung, Indonesia</image:geo_location>
+      <image:license>https://www.marketixlab.com/license</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.marketixlab.com/images/marketix-logo-icon.png.png</image:loc>
+      <image:title>Marketix Lab Icon</image:title>
+      <image:caption>Digital Marketing Agency Icon</image:caption>
+      <image:geo_location>Bandung, Indonesia</image:geo_location>
+      <image:license>https://www.marketixlab.com/license</image:license>
     </image:image>
     <image:image>
       <image:loc>https://www.marketixlab.com/images/who-we-are.jpg</image:loc>
       <image:title>Digital Marketing Strategy</image:title>
       <image:caption>Elevate Your Digital Presence with Marketix Lab</image:caption>
+      <image:geo_location>Bandung, Indonesia</image:geo_location>
     </image:image>
   </url>
+  
+  <!-- Brand Logos Page -->
+  <url>
+    <loc>https://www.marketixlab.com/clients</loc>
+    <image:image>
+      <image:loc>https://www.marketixlab.com/brand/bpw-clean.png</image:loc>
+      <image:title>BPW Clean Logo</image:title>
+      <image:caption>Trusted Client: BPW Clean</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.marketixlab.com/brand/donisa.png</image:loc>
+      <image:title>Donisa Multi Mandiri Logo</image:title>
+      <image:caption>Trusted Client: Donisa Multi Mandiri</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- About Section Images -->
+  <url>
+    <loc>https://www.marketixlab.com/#about</loc>
+    <image:image>
+      <image:loc>https://www.marketixlab.com/images/poster-2.jpg</image:loc>
+      <image:title>About Marketix Lab</image:title>
+      <image:caption>Who We Are - Digital Marketing Experts</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Portfolio/Work Section Images -->
   <url>
     <loc>https://www.marketixlab.com/#work</loc>
     <image:image>
       <image:loc>https://www.marketixlab.com/images/bpw-1.jpg</image:loc>
       <image:title>E-commerce Growth Case Study</image:title>
-      <image:caption>+150% Revenue Growth Through SEO & PPC Campaign</image:caption>
+      <image:caption>+150% Revenue Growth Through SEO &amp; PPC Campaign</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://www.marketixlab.com/images/bpw-2.jpg</image:loc>
@@ -37,13 +77,64 @@
       <image:caption>+300% Leads Through Email Marketing</image:caption>
     </image:image>
   </url>
+  
+  <!-- Digital Marketing Service Images -->
   <url>
-    <loc>https://www.marketixlab.com/#about</loc>
+    <loc>https://www.marketixlab.com/#digital-marketing</loc>
     <image:image>
-      <image:loc>https://www.marketixlab.com/images/poster-2.jpg</image:loc>
-      <image:title>About Marketix Lab</image:title>
-      <image:caption>Who We Are - Digital Marketing Experts</image:caption>
+      <image:loc>https://www.marketixlab.com/images/services/digital-marketing.jpg</image:loc>
+      <image:title>Digital Marketing Services</image:title>
+      <image:caption>Comprehensive Digital Marketing Solutions including SEO, PPC, Social Media Marketing, Content Marketing, and Email Marketing</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Content Marketing Service Images -->
+  <url>
+    <loc>https://www.marketixlab.com/#content-marketing</loc>
+    <image:image>
+      <image:loc>https://www.marketixlab.com/images/services/content-marketing.jpg</image:loc>
+      <image:title>Content Marketing Services</image:title>
+      <image:caption>Strategic content creation and distribution to attract and engage your target audience</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- AI Marketing Service Images -->
+  <url>
+    <loc>https://www.marketixlab.com/#ai-marketing</loc>
+    <image:image>
+      <image:loc>https://www.marketixlab.com/images/services/ai-marketing.jpg</image:loc>
+      <image:title>AI Marketing Services</image:title>
+      <image:caption>Leveraging artificial intelligence to revolutionize digital marketing strategies</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Brand Development Service Images -->
+  <url>
+    <loc>https://www.marketixlab.com/#brand-development</loc>
+    <image:image>
+      <image:loc>https://www.marketixlab.com/images/services/brand-development.jpg</image:loc>
+      <image:title>Brand Development Services</image:title>
+      <image:caption>Define your brand&apos;s purpose, values, and positioning to create a strong foundation</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Web Development Service Images -->
+  <url>
+    <loc>https://www.marketixlab.com/#web-development</loc>
+    <image:image>
+      <image:loc>https://www.marketixlab.com/images/services/web-development.jpg</image:loc>
+      <image:title>Web Development Services</image:title>
+      <image:caption>Custom website design and development solutions for businesses of all sizes</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Analytics & Reporting Service Images -->
+  <url>
+    <loc>https://www.marketixlab.com/#analytics-reporting</loc>
+    <image:image>
+      <image:loc>https://www.marketixlab.com/images/services/analytics-reporting.jpg</image:loc>
+      <image:title>Analytics &amp; Reporting Services</image:title>
+      <image:caption>Data-driven insights and comprehensive reporting to optimize your marketing campaigns</image:caption>
     </image:image>
   </url>
 </urlset>
-
