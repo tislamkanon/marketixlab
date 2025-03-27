@@ -71,7 +71,7 @@
     <image:image>
       <image:loc>https://www.marketixlab.com/images/bpw-1.jpg</image:loc>
       <image:title>E-commerce Growth Case Study</image:title>
-      <image:caption>+150% Revenue Growth Through SEO & PPC Campaign</image:caption>
+      <image:caption>+150% Revenue Growth Through SEO &amp; PPC Campaign</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://www.marketixlab.com/images/bpw-2.jpg</image:loc>
@@ -155,4 +155,3 @@
     <priority>0.6</priority>
   </url>
 </urlset>
-
