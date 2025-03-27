@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.marketixlab.com/</loc>
+    <image:image>
+      <image:loc>https://www.marketixlab.com/images/marketix-logo-black.png</image:loc>
+      <image:title>Marketix Lab Logo</image:title>
+      <image:caption>Digital Marketing Agency Logo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.marketixlab.com/images/marketix-logo-white.png</image:loc>
+      <image:title>Marketix Lab Logo White Version</image:title>
+      <image:caption>Digital Marketing Agency Logo for Dark Mode</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.marketixlab.com/images/who-we-are.jpg</image:loc>
+      <image:title>Digital Marketing Strategy</image:title>
+      <image:caption>Elevate Your Digital Presence with Marketix Lab</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.marketixlab.com/#work</loc>
+    <image:image>
+      <image:loc>https://www.marketixlab.com/images/bpw-1.jpg</image:loc>
+      <image:title>E-commerce Growth Case Study</image:title>
+      <image:caption>+150% Revenue Growth Through SEO & PPC Campaign</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.marketixlab.com/images/bpw-2.jpg</image:loc>
+      <image:title>Brand Awareness Case Study</image:title>
+      <image:caption>+200% Engagement Through Social Media Campaign</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.marketixlab.com/images/bpw-4.jpg</image:loc>
+      <image:title>Lead Generation Case Study</image:title>
+      <image:caption>+300% Leads Through Email Marketing</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.marketixlab.com/#about</loc>
+    <image:image>
+      <image:loc>https://www.marketixlab.com/images/poster-2.jpg</image:loc>
+      <image:title>About Marketix Lab</image:title>
+      <image:caption>Who We Are - Digital Marketing Experts</image:caption>
+    </image:image>
+  </url>
+</urlset>
+

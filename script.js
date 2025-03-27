@@ -346,51 +346,96 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Initial call to set active section
   updateActiveSection()
+
+  // Improve SEO crawlability by ensuring all links have proper attributes
+  document.querySelectorAll("a").forEach((link) => {
+    // Add title attributes to links that don't have them
+    if (!link.hasAttribute("title") && link.textContent.trim()) {
+      link.setAttribute("title", link.textContent.trim())
+    }
+
+    // Add rel="noopener" to external links for security and performance
+    if (link.hasAttribute("target") && link.getAttribute("target") === "_blank") {
+      link.setAttribute("rel", "noopener")
+    }
+  })
+
+  // Add alt text to images that don't have it
+  document.querySelectorAll("img").forEach((img) => {
+    if (!img.hasAttribute("alt") || img.getAttribute("alt") === "") {
+      // Extract filename as fallback alt text
+      const src = img.getAttribute("src")
+      const filename = src.split("/").pop().split(".")[0]
+      img.setAttribute("alt", filename.replace(/-/g, " "))
+    }
+  })
+
+  // Lazy load images that are below the fold
+  if ("IntersectionObserver" in window) {
+    const imgObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const img = entry.target
+          const src = img.getAttribute("data-src")
+          if (src) {
+            img.setAttribute("src", src)
+            img.removeAttribute("data-src")
+          }
+          observer.unobserve(img)
+        }
+      })
+    })
+
+    // Apply to images below the fold
+    document.querySelectorAll("img[data-src]").forEach((img) => {
+      imgObserver.observe(img)
+    })
+  }
 })
 
 // Add a simple rate limiter (one submission per 30 seconds)
-let lastSubmissionTime = 0;
-const SUBMISSION_DELAY = 30000; // 30 seconds in milliseconds
+let lastSubmissionTime = 0
+const SUBMISSION_DELAY = 30000 // 30 seconds in milliseconds
 
 function sendEmail() {
   // Check rate limit first
-  const currentTime = Date.now();
+  const currentTime = Date.now()
   if (currentTime - lastSubmissionTime < SUBMISSION_DELAY) {
-    alert("Please wait 30 seconds before sending another message.");
-    return;
+    alert("Please wait 30 seconds before sending another message.")
+    return
   }
 
   // Get form values
-  const firstName = document.getElementById("firstName").value.trim();
-  const lastName = document.getElementById("lastName").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const company = document.getElementById("company").value.trim();
-  const message = document.getElementById("message").value.trim();
+  const firstName = document.getElementById("firstName").value.trim()
+  const lastName = document.getElementById("lastName").value.trim()
+  const email = document.getElementById("email").value.trim()
+  const company = document.getElementById("company").value.trim()
+  const message = document.getElementById("message").value.trim()
 
   // Validate all fields are filled
   if (!firstName || !lastName || !email || !company || !message) {
-    alert("Please fill in all required fields.");
-    return;
+    alert("Please fill in all required fields.")
+    return
   }
 
   // Email format validation
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
   if (!emailPattern.test(email)) {
-    alert("Please enter a valid email address.");
-    return;
+    alert("Please enter a valid email address.")
+    return
   }
 
   // Additional spam prevention: check for suspicious content
   const suspiciousPatterns = [
-    /http[s]?:\/\//i,        // Links
-    /<[^>]+>/i,             // HTML tags
-    /(viagra|cialis|porn)/i // Common spam keywords
-  ];
-  
-  const allContent = `${firstName} ${lastName} ${company} ${message}`;
-  if (suspiciousPatterns.some(pattern => pattern.test(allContent))) {
-    alert("Your message contains suspicious content and cannot be sent.");
-    return;
+    /http[s]?:\/\//i, // Links
+    /<[^>]+>/i, // HTML tags
+    /(viagra|cialis|porn)/i, // Common spam keywords
+  ]
+
+  const allContent = `${firstName} ${lastName} ${company} ${message}`
+  if (suspiciousPatterns.some((pattern) => pattern.test(allContent))) {
+    alert("Your message contains suspicious content and cannot be sent.")
+    return
   }
 
   // Prepare email parameters
@@ -398,24 +443,58 @@ function sendEmail() {
     name: `${firstName} ${lastName}`,
     email: email,
     company: company,
-    message: message
-  };
+    message: message,
+  }
 
   // Send email
-  emailjs.send("service_8y4xrei", "template_lcmfixx", templateParams, "0AV5JViJGlh1s0AJT")
-    .then(response => {
-      console.log("Email sent!", response);
-      lastSubmissionTime = Date.now(); // Update last submission time
-      alert("Email sent successfully!");
+  emailjs
+    .send("service_8y4xrei", "template_lcmfixx", templateParams, "0AV5JViJGlh1s0AJT")
+    .then((response) => {
+      console.log("Email sent!", response)
+      lastSubmissionTime = Date.now() // Update last submission time
+      alert("Email sent successfully!")
       // Clear form
-      document.getElementById("firstName").value = "";
-      document.getElementById("lastName").value = "";
-      document.getElementById("email").value = "";
-      document.getElementById("company").value = "";
-      document.getElementById("message").value = "";
+      document.getElementById("firstName").value = ""
+      document.getElementById("lastName").value = ""
+      document.getElementById("email").value = ""
+      document.getElementById("company").value = ""
+      document.getElementById("message").value = ""
     })
-    .catch(error => {
-      console.error("Error:", error);
-      alert("Failed to send email. Please try again later.");
-    });
+    .catch((error) => {
+      console.error("Error:", error)
+      alert("Failed to send email. Please try again later.")
+    })
 }
+
+// Handle browser history for SPA-like navigation
+document.querySelectorAll(".nav-link").forEach((link) => {
+  link.addEventListener("click", function (e) {
+    const sectionId = this.getAttribute("data-section")
+    if (sectionId) {
+      // Update URL without page reload for better crawlability
+      history.pushState({ section: sectionId }, "", `#${sectionId}`)
+    }
+  })
+})
+
+// Handle browser back/forward buttons
+window.addEventListener("popstate", (e) => {
+  if (e.state && e.state.section) {
+    const section = document.getElementById(e.state.section)
+    if (section) {
+      // Update active link
+      document.querySelectorAll(".nav-link").forEach((l) => l.classList.remove("active"))
+      document.querySelectorAll(`[data-section="${e.state.section}"]`).forEach((l) => l.classList.add("active"))
+
+      // Scroll to section
+      const headerHeight = document.querySelector(".header").offsetHeight
+      const sectionTop = section.offsetTop - headerHeight
+
+      window.scrollTo({
+        top: sectionTop,
+        behavior: "smooth",
+      })
+    }
+  }
+})
+

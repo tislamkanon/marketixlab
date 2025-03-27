@@ -1,15 +1,91 @@
-# robots.txt for Marketix Lab
+# Marketix Lab Robots.txt
+# Updated: 2025-03-27
 
+# Global rules
 User-agent: *
 Allow: /
-Disallow: /cdn-cgi/  # Block Cloudflare scripts (used for email protection)
-Disallow: /*.json$    # Block JSON files, if any
-Disallow: /thank-you  # Block thank-you page (if it exists)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /includes/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /*?*
+Disallow: /*.pdf$
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /search
+Disallow: /thank-you
+Disallow: /*?s=*
+Disallow: /*&s=*
+Disallow: /wp-login.php
+Disallow: /wp-register.php
 
+# Prevent duplicate content issues
+Disallow: /*?utm_*
+Disallow: /*&utm_*
+Disallow: /*?fbclid=*
+Disallow: /*&fbclid=*
+Disallow: /*?gclid=*
+Disallow: /*&gclid=*
+
+# Specific rules for major search engines
 User-agent: Googlebot
 Allow: /
-Disallow: /cdn-cgi/
-Disallow: /*.json$
-Disallow: /thank-you
+Crawl-delay: 1
 
-Sitemap: https://marketixlab.com/sitemap.xml
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /wp-content/uploads/
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
+
+# Block AI crawlers from scraping content
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+# Block archive.org from archiving the site
+User-agent: archive.org_bot
+Disallow: /
+
+# Block social media crawlers
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+# Sitemap locations
+Sitemap: https://www.marketixlab.com/sitemap.xml
+Sitemap: https://www.marketixlab.com/blog-sitemap.xml
+Sitemap: https://www.marketixlab.com/image-sitemap.xml
+Sitemap: https://www.marketixlab.com/video-sitemap.xml
+
+# Host directive (helps with canonical issues)
+Host: www.marketixlab.com
+

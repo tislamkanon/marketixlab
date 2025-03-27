@@ -4,13 +4,93 @@
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marketix Lab</title>
+  <meta name="description" content="Marketix Lab - A full-service digital marketing agency helping businesses grow through strategic digital marketing solutions tailored to your unique needs.">
+  <meta name="keywords" content="digital marketing, SEO, social media marketing, content marketing, web development, brand development">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Marketix Lab - Digital Marketing Agency">
+  <meta property="og:description" content="Elevate your digital presence with Marketix Lab's strategic digital marketing solutions tailored to your unique needs.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.marketixlab.com/">
+  <meta property="og:image" content="images/marketix-logo-icon.png.png">
+  <title>Marketix Lab - Digital Marketing Agency</title>
+  
+  <!-- Preload critical assets -->
+  <link rel="preload" href="styles.css" as="style">
+  <link rel="preload" href="script.js" as="script">
+  <link rel="preload" href="images/marketix-logo-black.png" as="image">
+  <link rel="preload" href="images/marketix-logo-white.png" as="image">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+  <link rel="preload" href="https://unpkg.com/aos@next/dist/aos.css" as="style">
+  
+  <link rel="canonical" href="https://www.marketixlab.com/">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="icon" type="image/png" href="images\marketix-logo-icon.png.png">
+  <!-- Structured data for SEO -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Marketix Lab",
+      "image": "images/marketix-logo-icon.png.png",
+      "url": "https://www.marketixlab.com",
+      "telephone": "+6281316198226",
+      "email": "info@marketixlab.com",
+      "description": "Marketix Lab helps businesses grow through strategic digital marketing solutions tailored to your unique needs.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Sukapura No.20, Sukapura",
+        "addressLocality": "Kec. Dayeuhkolot",
+        "addressRegion": "Kabupaten Bandung",
+        "postalCode": "40267",
+        "addressCountry": "ID"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-6.9733",
+        "longitude": "107.6383"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "17:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/marketixlab",
+        "https://www.instagram.com/marketix.lab",
+        "https://www.twitter.com/marketixlab",
+        "https://www.tiktok.com/@marketixlab"
+      ]
+    }
+  </script>
+  
+  <!-- Service schema -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Digital Marketing",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Marketix Lab"
+      },
+      "description": "Comprehensive digital marketing solutions including SEO, PPC, social media marketing, content marketing, and email marketing.",
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+  </script>
 </head>
-<body>
+<body itemscope itemtype="https://schema.org/WebPage">
   <div class="site-wrapper">
     <!-- Preloader -->
     <div class="preloader">
@@ -34,7 +114,7 @@
             <img src="images/marketix-logo-white.png" alt="Marketix Lab" class="logo-dark" width="180" height="50">
           </a>
           
-          <nav class="desktop-nav">
+          <nav class="desktop-nav" role="navigation" aria-label="Main Navigation">
             <button class="nav-link active" data-section="home">
               <span>Home</span>
               <span class="nav-indicator"></span>
@@ -95,7 +175,7 @@
           <span></span>
         </button>
       </div>
-      <nav class="mobile-nav">
+      <nav class="mobile-nav" role="navigation" aria-label="Mobile Navigation">
         <button class="nav-link active" data-section="home">Home</button>
         <button class="nav-link" data-section="services">Services</button>
         <button class="nav-link" data-section="about">About</button>
@@ -121,7 +201,7 @@
 
     <main>
       <!-- Hero Section -->
-      <section id="home" class="hero-section">
+      <section id="home" class="hero-section" role="banner">
         <div class="bg-shapes">
           <div class="shape shape-1"></div>
           <div class="shape shape-2"></div>
@@ -646,7 +726,7 @@
                   </div>
                   <div class="contact-text">
                     <h3>Email</h3>
-                    <p>marketixlab@gmail.com</p>
+                    <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="dab7bba8b1bfaeb3a2b6bbb89abdb7bbb3b6f4b9b5b7">[email&#160;protected]</a></p>
                   </div>
                 </div>
                 
@@ -732,7 +812,7 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
       <div class="container">
         <div class="footer-content">
           <div class="footer-logo" data-aos="fade-right" data-aos-duration="800">
@@ -763,8 +843,7 @@
     </footer>
   </div>
 
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
-
