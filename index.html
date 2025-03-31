@@ -726,7 +726,7 @@
                   </div>
                   <div class="contact-text">
                     <h3>Email</h3>
-                    <p><a href="mailto:marketixlab@gmail.com">marketixlab@gmail.com</a></p>
+                    <p><span class="email-protection" data-email="marketixlab@gmail.com">marketixlab<span class="email-separator">@</span>gmail.com</span></p>
                   </div>
                 </div>
                 
@@ -843,7 +843,40 @@
     </footer>
   </div>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="script.js"></script>
+  
+  <!-- Email protection script -->
+  <script>
+    // Simple email protection script
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add click event to email protection elements
+      const protectedEmails = document.querySelectorAll('.email-protection');
+      
+      protectedEmails.forEach(function(element) {
+        const email = element.getAttribute('data-email');
+        
+        // Make it clickable
+        element.style.cursor = 'pointer';
+        
+        // Add click event to open email client
+        element.addEventListener('click', function(e) {
+          window.location.href = 'mailto:' + email;
+        });
+        
+        // Add hover effect
+        element.addEventListener('mouseenter', function() {
+          element.style.textDecoration = 'underline';
+          element.style.color = 'var(--primary)';
+        });
+        
+        element.addEventListener('mouseleave', function() {
+          element.style.textDecoration = 'none';
+          element.style.color = '';
+        });
+      });
+    });
+  </script>
 </body>
 </html>
+
