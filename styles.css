@@ -1711,6 +1711,17 @@ section {
   margin: 0;
 }
 
+.contact-text a {
+  color: var(--muted-foreground);
+  transition: color var(--transition-medium) var(--easing);
+  text-decoration: none; /* Optional: ensures no underline by default */
+}
+
+.contact-text a:hover {
+  color: var(--primary);
+  text-decoration: underline; /* Adds underline on hover */
+}
+
 .contact-form-container {
   position: relative;
   background-color: var(--card);

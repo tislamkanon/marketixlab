@@ -736,7 +736,9 @@
                   </div>
                   <div class="contact-text">
                     <h3>WhatsApp</h3>
-                    <p>(+62) 813-1619-8226</p>
+                    <p>
+                      <a href="#" class="whatsapp-link" data-number="6281316198226" target="_blank" rel="noopener">(+62) 813-1619-8226</a>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -874,6 +876,18 @@
           element.style.textDecoration = 'none';
           element.style.color = '';
         });
+      });
+    });
+  </script>
+  <!-- Whatsapp protection script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const links = document.querySelectorAll(".whatsapp-link");
+      links.forEach(link => {
+        const number = link.getAttribute("data-number");
+        const message = "Hey there, I’m [Your Name], excited to chat about your offerings!";
+        const whatsappUrl = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
+        link.setAttribute("href", whatsappUrl);
       });
     });
   </script>
