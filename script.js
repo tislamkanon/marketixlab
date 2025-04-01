@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("theme", isDark ? "dark" : "light")
     })
   })
-
+   //Designed by MD Touhidul Islam Kanon
   // Smooth scrolling for navigation
   const navLinks = document.querySelectorAll(".nav-link")
 
