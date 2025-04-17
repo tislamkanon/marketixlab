@@ -391,14 +391,15 @@ p {
   font-size: 0.875rem;
   font-weight: 500;
   background-color: rgba(var(--primary-rgb), 0.2);
-  color: var(--primary);
+  color: #2a5a11; /* Changed from var(--primary) to #668059 for light mode */
   margin-bottom: 1rem;
   transform: translateY(0);
   transition: transform var(--transition-medium) var(--easing-bounce);
 }
 
-.badge:hover {
-  transform: translateY(-3px);
+/* Add a specific override for dark mode to keep the original color */
+.dark .badge {
+  color: var(--primary);
 }
 
 /* Header */
@@ -2051,6 +2052,8 @@ textarea {
   display: block;
 }
 /* Hide Default Cursor */
-body, a, button {
+body,
+a,
+button {
   cursor: none;
 }

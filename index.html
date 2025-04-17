@@ -390,7 +390,7 @@
                 <i class="fas fa-code"></i>
               </div>
               <h3>Web Development</h3>
-              <p>Personalized email campaigns that nurture leads and boost customer retention.</p>
+              <p>Our web development services build the digital foundation for your success.</p>
               <ul style="margin: 0; padding-left: 30px;">
                 <li>Website Design</li>
                 <li>E-commerce Solutions</li>
@@ -749,20 +749,20 @@
               <form id="contactForm" class="contact-form">
                 <div class="form-row">
                   <div class="form-group">
-                    <label for="firstName">First name</label>
+                    <label for="name">Name</label>
                     <div class="input-wrapper">
-                      <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required autocomplete="given-name">
+                      <input type="text" id="name" name="name" placeholder="Enter your full name" required autocomplete="name">
                       <span class="input-focus-effect"></span>
                     </div>
-                    <span class="error-message" id="firstNameError"></span>
+                    <span class="error-message" id="nameError"></span>
                   </div>
                   <div class="form-group">
-                    <label for="lastName">Last name</label>
+                    <label for="lastName">Phone</label>
                     <div class="input-wrapper">
-                      <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required autocomplete="family-name">
+                      <input type="tel" id="lastName" name="phone" placeholder="Enter your phone number" required autocomplete="tel" pattern="[0-9+\-\s()]*">
                       <span class="input-focus-effect"></span>
                     </div>
-                    <span class="error-message" id="lastNameError"></span>
+                    <span class="error-message" id="phoneError"></span>
                   </div>
                 </div>
                 
@@ -885,7 +885,7 @@
       const links = document.querySelectorAll(".whatsapp-link");
       links.forEach(link => {
         const number = link.getAttribute("data-number");
-        const message = "Hey there, I’m [Your Name], excited to chat about your offerings!";
+        const message = "Hey there, I'm interested in your services!";
         const whatsappUrl = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
         link.setAttribute("href", whatsappUrl);
       });

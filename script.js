@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("theme", isDark ? "dark" : "light")
     })
   })
-   //Designed by MD Touhidul Islam Kanon
+  //Designed by MD Touhidul Islam Kanon
   // Smooth scrolling for navigation
   const navLinks = document.querySelectorAll(".nav-link")
 
@@ -208,21 +208,24 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelectorAll(".error-message").forEach((el) => (el.textContent = ""))
 
       // Get form values
-      const firstName = document.getElementById("firstName").value.trim()
-      const lastName = document.getElementById("lastName").value.trim()
+      const name = document.getElementById("name").value.trim()
+      const phone = document.getElementById("lastName").value.trim()
       const email = document.getElementById("email").value.trim()
       const message = document.getElementById("message").value.trim()
 
       // Validate form
       let isValid = true
 
-      if (!firstName) {
-        document.getElementById("firstNameError").textContent = "First name is required"
+      if (!name) {
+        document.getElementById("nameError").textContent = "Name is required"
         isValid = false
       }
 
-      if (!lastName) {
-        document.getElementById("lastNameError").textContent = "Last name is required"
+      if (!phone) {
+        document.getElementById("phoneError").textContent = "Phone number is required"
+        isValid = false
+      } else if (!/^[0-9+\-\s()]*$/.test(phone)) {
+        document.getElementById("phoneError").textContent = "Please enter a valid phone number"
         isValid = false
       }
 
@@ -406,14 +409,14 @@ function sendEmail() {
   }
 
   // Get form values
-  const firstName = document.getElementById("firstName").value.trim()
-  const lastName = document.getElementById("lastName").value.trim()
+  const name = document.getElementById("name").value.trim()
+  const phone = document.getElementById("lastName").value.trim()
   const email = document.getElementById("email").value.trim()
   const company = document.getElementById("company").value.trim()
   const message = document.getElementById("message").value.trim()
 
   // Validate all fields are filled
-  if (!firstName || !lastName || !email || !company || !message) {
+  if (!name || !phone || !email || !company || !message) {
     alert("Please fill in all required fields.")
     return
   }
@@ -425,6 +428,13 @@ function sendEmail() {
     return
   }
 
+  // Phone format validation
+  const phonePattern = /^[0-9+\-\s()]*$/
+  if (!phonePattern.test(phone)) {
+    alert("Please enter a valid phone number.")
+    return
+  }
+
   // Additional spam prevention: check for suspicious content
   const suspiciousPatterns = [
     /http[s]?:\/\//i, // Links
@@ -432,7 +442,7 @@ function sendEmail() {
     /(viagra|cialis|porn)/i, // Common spam keywords
   ]
 
-  const allContent = `${firstName} ${lastName} ${company} ${message}`
+  const allContent = `${name} ${phone} ${company} ${message}`
   if (suspiciousPatterns.some((pattern) => pattern.test(allContent))) {
     alert("Your message contains suspicious content and cannot be sent.")
     return
@@ -440,7 +450,8 @@ function sendEmail() {
 
   // Prepare email parameters
   const templateParams = {
-    name: `${firstName} ${lastName}`,
+    name: name,
+    phone: phone,
     email: email,
     company: company,
     message: message,
@@ -454,7 +465,7 @@ function sendEmail() {
       lastSubmissionTime = Date.now() // Update last submission time
       alert("Email sent successfully!")
       // Clear form
-      document.getElementById("firstName").value = ""
+      document.getElementById("name").value = ""
       document.getElementById("lastName").value = ""
       document.getElementById("email").value = ""
       document.getElementById("company").value = ""
@@ -497,4 +508,3 @@ window.addEventListener("popstate", (e) => {
     }
   }
 })
-
